@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Routes, ROUTER_DIRECTIVES} from '@angular/router';
+import {onsPlatform} from 'angular2-onsenui';
 
 @Component({
   selector: 'tabbar',
@@ -20,7 +21,7 @@ export class Tabbar {
       { path: '/dialogs',    label: 'Dialogs',    },
       { path: '/animations', label: 'Animations', },
     ];
-    this.material = ons.platform.isAndroid();
+    this.material = onsPlatform.isAndroid();
   }
 
   updateStyle(platform: string) {
